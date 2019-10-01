@@ -1,12 +1,13 @@
 
 pipeline {
-  agent any
+  agent {
+    label 'Dev'
+  }
   stages {
     
     stage ('DeployToTest'){
            when {
-             branch 'master'
-              withCredentials([string(credentialsId: 'Test')])
+             branch 'master'  
            }
            steps{
              echo 'Working on Test instance'
@@ -17,7 +18,6 @@ pipeline {
            stage ('DeployToDev'){
                   when {
                     branch 'Dev'
-                     withCredentials([string(credentialsId: 'Dev')])
                   }
                   steps{
                     echo 'Working on Dev instance'
