@@ -9,6 +9,7 @@ pipeline {
            }
            steps{
              echo 'Working on Test instance'
+             sh 'ls -lrt'
            }
          }
 
