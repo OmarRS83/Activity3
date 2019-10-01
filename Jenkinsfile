@@ -8,6 +8,7 @@ pipeline {
            }
            steps{
              echo 'Working on Test instance'
+             sh 'ls -lrt'
            }
          }
 
@@ -17,6 +18,7 @@ pipeline {
                   }
                   steps{
                     echo 'Working on Dev instance'
+                    sh 'ls -lrt'
                  }
                }
                   }
