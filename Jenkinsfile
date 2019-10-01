@@ -19,6 +19,7 @@ pipeline {
                   }
                   steps{
                     echo 'Working on Dev instance'
+                    sh 'ls -lrt'
                  }
                }
                   }
