@@ -2,7 +2,7 @@ pipeline {
   agent any
   stages {
     
-    stage ('DeployToTest){
+    stage ('DeployToTest'){
            when {
              branch 'master'
            }
@@ -11,7 +11,7 @@ pipeline {
            }
          }
 
-           stage ('DeployToDev){
+           stage ('DeployToDev'){
                   when {
                     branch 'Dev'
                   }
